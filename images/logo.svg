@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60" fill="none">
+  <!-- Brand Icon -->
+  <g transform="translate(4, 6)">
+    <!-- Cup Saucer -->
+    <ellipse cx="24" cy="42" rx="22" ry="4" fill="#C89B3C" opacity="0.6"/>
+    <!-- Cup Body -->
+    <path d="M7 16 C7 36, 15 42, 24 42 C33 42, 41 36, 41 16 Z" fill="#4A2C1D"/>
+    <!-- Cup Rim Highlight -->
+    <ellipse cx="24" cy="16" rx="17" ry="3.5" fill="#6F4E37"/>
+    <!-- Cup Liquid -->
+    <ellipse cx="24" cy="16.5" rx="14" ry="2.5" fill="#24140E"/>
+    <!-- Cup Handle -->
+    <path d="M39 20 C45 20, 47 28, 38 31" stroke="#4A2C1D" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <!-- Steam Lines -->
+    <path d="M17 12 C16 8, 20 6, 18 2" stroke="#C89B3C" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+    <path d="M24 11 C23 6, 27 5, 25 1" stroke="#C89B3C" stroke-width="2.2" stroke-linecap="round" opacity="0.95"/>
+    <path d="M31 12 C30 8, 34 6, 32 2" stroke="#C89B3C" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+    <!-- Coffee Bean Emblem in center of cup -->
+    <ellipse cx="24" cy="27" rx="4.5" ry="6" fill="#C89B3C" transform="rotate(-20 24 27)"/>
+    <path d="M23 21.5 C26 25, 22 29, 25 32.5" stroke="#4A2C1D" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(60, 10)">
+    <text x="0" y="24" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#24140E" letter-spacing="0.5">
+      BREW <tspan fill="#C89B3C">&amp;</tspan> BEAN
+    </text>
+    <text x="2" y="38" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="9" font-weight="600" fill="#8C5332" letter-spacing="3.5">
+      ARTISAN ROASTERY
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crafted Menu | Brew &amp; Bean Café</title>
+  <meta name="description" content="Explore the artisanal menu at Brew &amp; Bean Café: specialty coffees, ceremonial matcha, cold craft coolers, savory sourdough breakfasts, and freshly baked pastries." />
+
+  <!-- Google Fonts Pair -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- =========================================================================
+       1. NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="header" id="siteHeader">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="index.html" class="nav-brand" aria-label="Brew and Bean Café Home">
+        <img src="images/logo.svg" alt="Brew &amp; Bean Café" class="brand-logo-img" />
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions (Cart & Hamburger) -->
+      <div class="nav-actions">
+        <!-- Shopping Cart Toggle -->
+        <button class="cart-toggle-btn js-open-cart" aria-label="View Shopping Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. MAIN CONTENT
+       ========================================================================= -->
+  <main id="main-content">
+    
+    <!-- Menu Header Banner -->
+    <section class="section section-alt" style="padding: 50px 0 30px;" aria-label="Menu Introduction">
+      <div class="container">
+        <div class="section-header reveal-on-scroll" style="margin-bottom: 30px;">
+          <span class="section-tag">Handcrafted Offerings</span>
+          <h1 class="section-title">Our Crafted Menu</h1>
+          <p class="section-subtitle">From carefully pulled double espressos to warm flaky croissants and artisan desserts, everything is prepared fresh daily with the finest ingredients.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="menu-search-wrapper reveal-on-scroll">
+          <svg class="menu-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="Search coffee, brunch, desserts..." aria-label="Search menu items" />
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="menu-filter-bar reveal-on-scroll" role="tablist" aria-label="Filter Menu by Category">
+          <button class="filter-btn active" data-category="all" role="tab" aria-selected="true">All Items</button>
+          <button class="filter-btn" data-category="coffee" role="tab" aria-selected="false">☕ Coffee</button>
+          <button class="filter-btn" data-category="tea" role="tab" aria-selected="false">🍵 Artisan Tea</button>
+          <button class="filter-btn" data-category="drinks" role="tab" aria-selected="false">🥤 Cold Drinks</button>
+          <button class="filter-btn" data-category="food" role="tab" aria-selected="false">🥐 Breakfast &amp; Snacks</button>
+          <button class="filter-btn" data-category="desserts" role="tab" aria-selected="false">🍰 Desserts</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Items Grid -->
+    <section class="section" aria-label="Menu Items List">
+      <div class="container">
+        <div class="menu-grid" id="menuGridContainer">
+          <!-- Dynamically populated by MenuController in js/script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Dietary & Sourcing Notice -->
+    <section class="section section-alt" style="padding: 40px 0;" aria-label="Dietary and Customization Notice">
+      <div class="container">
+        <div class="pillar-card" style="text-align: center; max-width: 820px; margin: 0 auto;">
+          <h3 style="font-size: 1.3rem; margin-bottom: 8px;">Dietary Preferences &amp; Plant-Based Options</h3>
+          <p style="font-size: 0.95rem; color: var(--clr-text-muted);">We proudly offer organic Oat Milk, Almond Milk, and Soy Milk at no extra charge. Gluten-free pastries and vegan options are prepared in a dedicated sanitized section. Inquire with our baristas for any allergy accommodations.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       3. SHOPPING CART DRAWER (Global Component)
+       ========================================================================= -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-header">
+      <div class="cart-title-wrapper">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <h3>Your Order</h3>
+      </div>
+      <button class="close-drawer-btn" id="closeCartDrawer" aria-label="Close cart drawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <!-- Dynamic Cart Item List -->
+    <div class="cart-items-list" id="cartDrawerItems"></div>
+
+    <!-- Empty State -->
+    <div class="cart-empty-state" id="cartEmptyState">
+      <div class="cart-empty-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      </div>
+      <h4>Your cart is empty</h4>
+      <p>Discover our single-origin coffees, fresh teas, and warm scratch pastries.</p>
+      <button class="btn btn-primary btn-sm" onclick="window.closeCartDrawer()">Browse Menu</button>
+    </div>
+
+    <!-- Cart Footer with Pricing & Actions -->
+    <div class="cart-footer" id="cartDrawerFooter" style="display: none;">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$0.00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Estimated Tax (8%)</span>
+        <span id="cartTax">$0.00</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total</span>
+        <span id="cartTotal" class="text-gold">$0.00</span>
+      </div>
+
+      <div class="cart-footer-actions">
+        <button class="btn btn-accent" id="cartCheckoutBtn" style="width: 100%;">
+          <span>Proceed to Checkout</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+        <button class="btn-clear-cart" onclick="CartEngine.clearCart()">Clear Entire Cart</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       4. CHECKOUT MODAL (Global Component)
+       ========================================================================= -->
+  <div class="modal-wrapper" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+    <div class="modal-backdrop" id="checkoutModalBackdrop"></div>
+
+    <div class="modal-dialog">
+      <!-- Checkout Form View -->
+      <div id="checkoutFormView">
+        <div class="modal-header">
+          <h3 id="checkoutModalTitle" style="font-size: 1.3rem;">Complete Your Order</h3>
+          <button class="close-drawer-btn" id="closeCheckoutModal" aria-label="Close modal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <form class="modal-body" id="checkoutForm" novalidate>
+          <div style="background: var(--clr-bg); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 16px; margin-bottom: 22px;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 10px; font-size: 0.95rem;">
+              <span>Order Items Summary</span>
+              <span id="checkoutModalTotal" class="text-gold">$0.00</span>
+            </div>
+            <div id="checkoutOrderSummary" style="max-height: 120px; overflow-y: auto; padding-right: 6px;"></div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="checkoutName" class="form-label">Full Name <span class="required">*</span></label>
+              <input type="text" id="checkoutName" class="form-control" placeholder="Jane Doe" required />
+              <span class="error-hint">Please enter your name</span>
+            </div>
+
+            <div class="form-group">
+              <label for="checkoutPhone" class="form-label">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="checkoutPhone" class="form-control" placeholder="(555) 000-0000" required />
+              <span class="error-hint">Please enter a valid phone number</span>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="checkoutEmail" class="form-label">Email Address <span class="required">*</span></label>
+              <input type="email" id="checkoutEmail" class="form-control" placeholder="jane@example.com" required />
+              <span class="error-hint">Please enter a valid email for order receipt</span>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="checkoutOrderType" class="form-label">Order Type <span class="required">*</span></label>
+              <select id="checkoutOrderType" class="form-control">
+                <option value="dine-in">Dine-in (At Café)</option>
+                <option value="takeout">Takeout (Quick Pickup)</option>
+                <option value="delivery">Local Delivery (Within 5 Miles)</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width" id="checkoutLocationGroup">
+              <label for="checkoutLocation" class="form-label" id="checkoutLocationLabel">Table Number <span class="required">*</span></label>
+              <input type="text" id="checkoutLocation" class="form-control" placeholder="e.g., Table 4 or Patio 2" />
+              <span class="error-hint">Please provide your table or address</span>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="checkoutNotes" class="form-label">Special Instructions &amp; Dietary Notes</label>
+              <textarea id="checkoutNotes" class="form-control" placeholder="Extra oat milk, less ice, allergy notices..." style="min-height: 70px;"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 10px;">
+            <span>Place Order Now</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Confirmation Success View -->
+      <div id="checkoutSuccessView" class="order-success-screen" style="display: none;">
+        <div class="order-success-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Order Confirmed!</h3>
+        <p style="color: var(--clr-text-muted); max-width: 440px; margin: 0 auto;">Your order has been transmitted straight to the barista station.</p>
+        <div class="order-id-badge" id="confirmedOrderId">#BB-89241</div>
+        <p id="confirmedOrderMessage" style="font-size: 0.95rem; margin-bottom: 26px;"></p>
+        <button class="btn btn-primary" onclick="UIController.closeCheckoutModal()">Back to Café</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Scroll back to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- =========================================================================
+       5. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <img src="images/logo.svg" alt="Brew &amp; Bean Logo" style="height: 44px; margin-bottom: 18px; filter: brightness(0) invert(1);" />
+          <p>Brew &amp; Bean is an artisan coffee roastery dedicated to direct-trade sourcing, sustainable roasting, and creating warm moments for our neighborhood community.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Crafted Menu</a></li>
+            <li><a href="about.html">Our Story &amp; Heritage</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+            <li><a href="#" class="js-open-cart">Shopping Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Delicacies</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html">Artisan Espresso</a></li>
+            <li><a href="menu.html">Nitro Cold Brews</a></li>
+            <li><a href="menu.html">Ceremonial Matcha</a></li>
+            <li><a href="menu.html">Sourdough Breakfast</a></li>
+            <li><a href="menu.html">Basque Cheesecakes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Operating Hours</h4>
+          <ul class="footer-hours-list">
+            <li><span>Mon &ndash; Fri:</span> <span>7:00 AM &ndash; 8:00 PM</span></li>
+            <li><span>Saturday:</span> <span>8:00 AM &ndash; 9:00 PM</span></li>
+            <li><span>Sunday:</span> <span>8:00 AM &ndash; 7:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brew &amp; Bean Café. All rights reserved. Crafted with passion.</p>
+        <p>Designed for coffee enthusiasts everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

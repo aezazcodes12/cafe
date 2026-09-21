@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Visit Us | Brew &amp; Bean Café</title>
+  <meta name="description" content="Get in touch with Brew &amp; Bean Café. Find our location, view opening hours, book a table reservation, or send us a message." />
+
+  <!-- Google Fonts Pair -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- =========================================================================
+       1. NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="header" id="siteHeader">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="index.html" class="nav-brand" aria-label="Brew and Bean Café Home">
+        <img src="images/logo.svg" alt="Brew &amp; Bean Café" class="brand-logo-img" />
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <!-- Nav Actions (Cart & Hamburger) -->
+      <div class="nav-actions">
+        <!-- Shopping Cart Toggle -->
+        <button class="cart-toggle-btn js-open-cart" aria-label="View Shopping Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. MAIN CONTENT
+       ========================================================================= -->
+  <main id="main-content">
+    
+    <!-- Header Banner -->
+    <section class="section section-alt" style="padding: 60px 0 35px;" aria-label="Contact Page Introduction">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">We&rsquo;d Love to Hear From You</span>
+          <h1 class="section-title">Get in Touch with Our Team</h1>
+          <p class="section-subtitle">Whether reserving a table for brunch, planning a private gathering, or asking about our single-origin bean subscriptions—we are here to help.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Details & Form Section -->
+    <section class="section" aria-label="Contact Information and Inquiries">
+      <div class="container">
+        <div class="contact-layout">
+          
+          <!-- Left Column: Contact Cards -->
+          <div class="contact-info-panel reveal-on-scroll">
+            <!-- Card 1: Address -->
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="info-content">
+                <h3>Our Roastery &amp; Café</h3>
+                <p>452 Artisan Boulevard, West Roast District, Suite 100</p>
+                <p style="color: var(--clr-text-light); font-size: 0.85rem; margin-top: 4px;">Convenient street parking &amp; bike racks available</p>
+              </div>
+            </div>
+
+            <!-- Card 2: Phone & Email -->
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="info-content">
+                <h3>Direct Inquiries</h3>
+                <p><strong>Phone:</strong> <a href="tel:+15552345678" style="color: var(--clr-accent);">(555) 234-5678</a></p>
+                <p><strong>Email:</strong> <a href="mailto:hello@brewbean.com" style="color: var(--clr-accent);">hello@brewbean.com</a></p>
+              </div>
+            </div>
+
+            <!-- Card 3: Opening Hours -->
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="info-content">
+                <h3>Café Hours</h3>
+                <p><strong>Monday &ndash; Friday:</strong> 7:00 AM &ndash; 8:00 PM</p>
+                <p><strong>Saturday:</strong> 8:00 AM &ndash; 9:00 PM</p>
+                <p><strong>Sunday:</strong> 8:00 AM &ndash; 7:00 PM</p>
+              </div>
+            </div>
+
+            <!-- Card 4: Roastery Tours & Events -->
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+              </div>
+              <div class="info-content">
+                <h3>Public Cupping &amp; Tours</h3>
+                <p>Join us every Saturday at 11:00 AM for complimentary coffee cupping &amp; bean tastings.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-card reveal-on-scroll delay-100">
+            <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Send a Message or Reserve</h3>
+            <p style="margin-bottom: 24px;">Fill out the form below and we will get back to you within 2 business hours.</p>
+
+            <form id="contactForm" novalidate>
+              <div class="form-grid">
+                <!-- Name -->
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Full Name <span class="required">*</span></label>
+                  <input type="text" id="contactName" class="form-control" placeholder="Jane Doe" required />
+                  <span class="error-hint">Please enter your full name (at least 2 characters)</span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" id="contactEmail" class="form-control" placeholder="jane@example.com" required />
+                  <span class="error-hint">Please enter a valid email address</span>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                  <label for="contactPhone" class="form-label">Phone Number</label>
+                  <input type="tel" id="contactPhone" class="form-control" placeholder="(555) 000-0000" />
+                </div>
+
+                <!-- Subject / Reason -->
+                <div class="form-group">
+                  <label for="contactSubject" class="form-label">Reason for Inquiry</label>
+                  <select id="contactSubject" class="form-control">
+                    <option value="general">General Inquiry</option>
+                    <option value="reservation">Table Reservation</option>
+                    <option value="events">Private Event / Catering</option>
+                    <option value="wholesale">Wholesale Beans &amp; Roasting</option>
+                    <option value="feedback">Guest Feedback</option>
+                  </select>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group full-width">
+                  <label for="contactMessage" class="form-label">Your Message <span class="required">*</span></label>
+                  <textarea id="contactMessage" class="form-control" placeholder="Tell us how we can help you or include table reservation details (date, time, party size)..." required></textarea>
+                  <span class="error-hint">Please enter a message (at least 5 characters)</span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top: 10px; width: 100%;">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Interactive Map Placeholder -->
+        <div class="map-placeholder-box reveal-on-scroll">
+          <svg class="map-svg-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" preserveAspectRatio="none">
+            <!-- Map Background Grid -->
+            <rect width="1000" height="400" fill="#EAE6DF"/>
+            <!-- City Blocks -->
+            <rect x="50" y="40" width="180" height="120" rx="8" fill="#DCD7CF"/>
+            <rect x="260" y="40" width="220" height="120" rx="8" fill="#DCD7CF"/>
+            <rect x="510" y="40" width="200" height="120" rx="8" fill="#DCD7CF"/>
+            <rect x="740" y="40" width="210" height="120" rx="8" fill="#DCD7CF"/>
+            
+            <rect x="50" y="220" width="260" height="140" rx="8" fill="#DCD7CF"/>
+            <rect x="340" y="220" width="290" height="140" rx="8" fill="#DCD7CF"/>
+            <rect x="660" y="220" width="290" height="140" rx="8" fill="#DCD7CF"/>
+
+            <!-- Park green area -->
+            <rect x="340" y="220" width="290" height="140" rx="8" fill="#CFDFC5" opacity="0.7"/>
+
+            <!-- Main Avenues (Roads) -->
+            <path d="M0 185 L1000 185" stroke="#FFFFFF" stroke-width="32"/>
+            <path d="M0 185 L1000 185" stroke="#C5BEB3" stroke-width="2" stroke-dasharray="8 8"/>
+
+            <path d="M495 0 L495 400" stroke="#FFFFFF" stroke-width="28"/>
+            <path d="M495 0 L495 400" stroke="#C5BEB3" stroke-width="2" stroke-dasharray="8 8"/>
+
+            <!-- Water River curve on bottom right -->
+            <path d="M720 400 C800 320, 850 360, 1000 280 L1000 400 Z" fill="#BFD7E3" opacity="0.7"/>
+
+            <!-- Café Pin Location at Center Intersection -->
+            <g transform="translate(475, 125)">
+              <!-- Pin Shadow -->
+              <ellipse cx="20" cy="50" rx="14" ry="5" fill="rgba(33, 19, 11, 0.25)"/>
+              <!-- Pin Head -->
+              <path d="M20 2 C9 2, 0 11, 0 22 C0 37, 20 50, 20 50 C20 50, 40 37, 40 22 C40 11, 31 2, 20 2 Z" fill="#C89B3C"/>
+              <circle cx="20" cy="20" r="9" fill="#24140E"/>
+              <path d="M16 19 C18 16, 17 23, 22 20" stroke="#C89B3C" stroke-width="1.8" stroke-linecap="round"/>
+            </g>
+          </svg>
+
+          <!-- Floating Map Overlay Card -->
+          <div class="map-overlay-card">
+            <h4>Brew &amp; Bean Roastery</h4>
+            <p>452 Artisan Boulevard, West Roast District</p>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <span>Open in Google Maps</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Frequently Asked Questions Accordion -->
+        <div class="faq-section reveal-on-scroll">
+          <div class="section-header" style="margin-bottom: 30px;">
+            <span class="section-tag">Help &amp; Questions</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Do you have free Wi-Fi and power outlets for laptops?</span>
+              <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Yes! We offer gigabit fiber-optic Wi-Fi complimentary for all guests. Ample universal power outlets and USB ports are situated throughout our main lounge tables and banquette seating.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Is Brew &amp; Bean pet friendly?</span>
+              <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Our outdoor covered garden patio is 100% pet-friendly! We provide clean water bowls and complimentary peanut-butter oat dog biscuits baked fresh in-house.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Can I reserve a table or host private events?</span>
+              <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Table reservations for parties of 4 or more can be booked through our contact form above. For evening private venue buyouts or corporate workshops, please select "Private Event / Catering" in the inquiry form.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Do you accommodate dairy allergies and vegan diets?</span>
+              <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Absolutely. We prepare drinks with barista-grade oat, almond, and soy milks with zero surcharge. We also carry a rotating selection of certified vegan, dairy-free, and gluten-free pastries and dishes.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       3. SHOPPING CART DRAWER (Global Component)
+       ========================================================================= -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-header">
+      <div class="cart-title-wrapper">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <h3>Your Order</h3>
+      </div>
+      <button class="close-drawer-btn" id="closeCartDrawer" aria-label="Close cart drawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <!-- Dynamic Cart Item List -->
+    <div class="cart-items-list" id="cartDrawerItems"></div>
+
+    <!-- Empty State -->
+    <div class="cart-empty-state" id="cartEmptyState">
+      <div class="cart-empty-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      </div>
+      <h4>Your cart is empty</h4>
+      <p>Discover our single-origin coffees, fresh teas, and warm scratch pastries.</p>
+      <a href="menu.html" class="btn btn-primary btn-sm">Explore Menu</a>
+    </div>
+
+    <!-- Cart Footer with Pricing & Actions -->
+    <div class="cart-footer" id="cartDrawerFooter" style="display: none;">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$0.00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Estimated Tax (8%)</span>
+        <span id="cartTax">$0.00</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total</span>
+        <span id="cartTotal" class="text-gold">$0.00</span>
+      </div>
+
+      <div class="cart-footer-actions">
+        <button class="btn btn-accent" id="cartCheckoutBtn" style="width: 100%;">
+          <span>Proceed to Checkout</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+        <button class="btn-clear-cart" onclick="CartEngine.clearCart()">Clear Entire Cart</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       4. CHECKOUT MODAL (Global Component)
+       ========================================================================= -->
+  <div class="modal-wrapper" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+    <div class="modal-backdrop" id="checkoutModalBackdrop"></div>
+
+    <div class="modal-dialog">
+      <!-- Checkout Form View -->
+      <div id="checkoutFormView">
+        <div class="modal-header">
+          <h3 id="checkoutModalTitle" style="font-size: 1.3rem;">Complete Your Order</h3>
+          <button class="close-drawer-btn" id="closeCheckoutModal" aria-label="Close modal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <form class="modal-body" id="checkoutForm" novalidate>
+          <div style="background: var(--clr-bg); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 16px; margin-bottom: 22px;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 10px; font-size: 0.95rem;">
+              <span>Order Items Summary</span>
+              <span id="checkoutModalTotal" class="text-gold">$0.00</span>
+            </div>
+            <div id="checkoutOrderSummary" style="max-height: 120px; overflow-y: auto; padding-right: 6px;"></div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="checkoutName" class="form-label">Full Name <span class="required">*</span></label>
+              <input type="text" id="checkoutName" class="form-control" placeholder="Jane Doe" required />
+              <span class="error-hint">Please enter your name</span>
+            </div>
+
+            <div class="form-group">
+              <label for="checkoutPhone" class="form-label">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="checkoutPhone" class="form-control" placeholder="(555) 000-0000" required />
+              <span class="error-hint">Please enter a valid phone number</span>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="checkoutEmail" class="form-label">Email Address <span class="required">*</span></label>
+              <input type="email" id="checkoutEmail" class="form-control" placeholder="jane@example.com" required />
+              <span class="error-hint">Please enter a valid email for order receipt</span>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="checkoutOrderType" class="form-label">Order Type <span class="required">*</span></label>
+              <select id="checkoutOrderType" class="form-control">
+                <option value="dine-in">Dine-in (At Café)</option>
+                <option value="takeout">Takeout (Quick Pickup)</option>
+                <option value="delivery">Local Delivery (Within 5 Miles)</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width" id="checkoutLocationGroup">
+              <label for="checkoutLocation" class="form-label" id="checkoutLocationLabel">Table Number <span class="required">*</span></label>
+              <input type="text" id="checkoutLocation" class="form-control" placeholder="e.g., Table 4 or Patio 2" />
+              <span class="error-hint">Please provide your table or address</span>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="checkoutNotes" class="form-label">Special Instructions &amp; Dietary Notes</label>
+              <textarea id="checkoutNotes" class="form-control" placeholder="Extra oat milk, less ice, allergy notices..." style="min-height: 70px;"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 10px;">
+            <span>Place Order Now</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Confirmation Success View -->
+      <div id="checkoutSuccessView" class="order-success-screen" style="display: none;">
+        <div class="order-success-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Order Confirmed!</h3>
+        <p style="color: var(--clr-text-muted); max-width: 440px; margin: 0 auto;">Your order has been transmitted straight to the barista station.</p>
+        <div class="order-id-badge" id="confirmedOrderId">#BB-89241</div>
+        <p id="confirmedOrderMessage" style="font-size: 0.95rem; margin-bottom: 26px;"></p>
+        <button class="btn btn-primary" onclick="UIController.closeCheckoutModal()">Back to Café</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Scroll back to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- =========================================================================
+       5. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <img src="images/logo.svg" alt="Brew &amp; Bean Logo" style="height: 44px; margin-bottom: 18px; filter: brightness(0) invert(1);" />
+          <p>Brew &amp; Bean is an artisan coffee roastery dedicated to direct-trade sourcing, sustainable roasting, and creating warm moments for our neighborhood community.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Crafted Menu</a></li>
+            <li><a href="about.html">Our Story &amp; Heritage</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+            <li><a href="#" class="js-open-cart">Shopping Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Delicacies</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html">Artisan Espresso</a></li>
+            <li><a href="menu.html">Nitro Cold Brews</a></li>
+            <li><a href="menu.html">Ceremonial Matcha</a></li>
+            <li><a href="menu.html">Sourdough Breakfast</a></li>
+            <li><a href="menu.html">Basque Cheesecakes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Operating Hours</h4>
+          <ul class="footer-hours-list">
+            <li><span>Mon &ndash; Fri:</span> <span>7:00 AM &ndash; 8:00 PM</span></li>
+            <li><span>Saturday:</span> <span>8:00 AM &ndash; 9:00 PM</span></li>
+            <li><span>Sunday:</span> <span>8:00 AM &ndash; 7:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brew &amp; Bean Café. All rights reserved. Crafted with passion.</p>
+        <p>Designed for coffee enthusiasts everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

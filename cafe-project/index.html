@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew &amp; Bean Café | Fresh Coffee. Delicious Moments.</title>
+  <meta name="description" content="Welcome to Brew &amp; Bean Café. Handcrafted single-origin coffee, artisan pastries, and warm cozy moments. Order online or visit our sanctuary." />
+
+  <!-- Google Fonts Pair -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- =========================================================================
+       1. NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="header" id="siteHeader">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="index.html" class="nav-brand" aria-label="Brew and Bean Café Home">
+        <img src="images/logo.svg" alt="Brew &amp; Bean Café" class="brand-logo-img" />
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions (Cart & Hamburger) -->
+      <div class="nav-actions">
+        <!-- Shopping Cart Toggle -->
+        <button class="cart-toggle-btn js-open-cart" aria-label="View Shopping Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. MAIN CONTENT
+       ========================================================================= -->
+  <main id="main-content">
+    
+    <!-- Hero Section with Media Carousel (Images & Ambient Video) -->
+    <section class="hero-section" aria-label="Featured Café Showcase">
+      <div class="hero-carousel">
+        <div class="carousel-track">
+          <!-- Slide 1: Cozy Café Atmosphere (Active) -->
+          <div class="carousel-slide active">
+            <img src="images/hero-1.jpg" alt="Cozy warm café seating with sunlight streaming in" class="carousel-media" />
+          </div>
+          <!-- Slide 2: Barista Pour-Over Craft & Ambient Motion Video -->
+          <div class="carousel-slide">
+            <video id="heroAmbientVideo" class="carousel-media" autoplay muted loop playsinline poster="images/hero-2.jpg">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
+              <img src="images/hero-2.jpg" alt="Barista delicately crafting a specialty pour over brew" class="carousel-media" />
+            </video>
+          </div>
+          <!-- Slide 3: Handcrafted Treats & Morning Moments -->
+          <div class="carousel-slide">
+            <img src="images/hero-3.jpg" alt="Table with latte art coffee and fresh breakfast croissant" class="carousel-media" />
+          </div>
+          <!-- Slide 4: Artisan Roasting Craft -->
+          <div class="carousel-slide">
+            <img src="images/about-story.jpg" alt="Master coffee roasting in small batches" class="carousel-media" />
+          </div>
+        </div>
+
+        <div class="carousel-overlay"></div>
+
+        <!-- Carousel Navigation Arrows -->
+        <button class="carousel-btn prev" aria-label="Previous Slide">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="carousel-btn next" aria-label="Next Slide">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <!-- Carousel Dots Indicator -->
+        <div class="carousel-indicators"></div>
+
+        <!-- Ambient Video Play/Pause Control -->
+        <button class="video-toggle-control" id="ambientVideoToggle" aria-label="Toggle ambient video motion">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+          <span>Pause Video</span>
+        </button>
+      </div>
+
+      <!-- Hero Text Content -->
+      <div class="container hero-content">
+        <span class="hero-badge reveal-on-scroll">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"></circle></svg>
+          Artisan Roastery &amp; Fresh Kitchen
+        </span>
+
+        <h1 class="hero-title reveal-on-scroll delay-100">
+          Fresh Coffee.<br />Delicious Moments.
+        </h1>
+
+        <p class="hero-description reveal-on-scroll delay-200">
+          Step into our sanctuary of freshly roasted single-origin beans, velvety lattes, and hand-baked pastries. Roasted with passion, brewed with precision, and served with warmth.
+        </p>
+
+        <div class="hero-actions reveal-on-scroll delay-300">
+          <a href="menu.html" class="btn btn-accent">
+            <span>Explore Menu</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <button class="btn btn-outline-white js-open-cart">
+            <span>Order Now</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          </button>
+        </div>
+
+        <!-- Quick Trust Indicators -->
+        <div class="hero-features-bar reveal-on-scroll delay-400">
+          <div class="hero-feature-item">
+            <div class="hero-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <div class="hero-feature-text">
+              <h4>100% Arabica Beans</h4>
+              <p>Direct farm trade</p>
+            </div>
+          </div>
+
+          <div class="hero-feature-item">
+            <div class="hero-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="hero-feature-text">
+              <h4>Roasted Daily</h4>
+              <p>Small batch perfection</p>
+            </div>
+          </div>
+
+          <div class="hero-feature-item">
+            <div class="hero-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </div>
+            <div class="hero-feature-text">
+              <h4>Artisan Kitchen</h4>
+              <p>Baked fresh each dawn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Pillars Section -->
+    <section class="section" aria-label="Why Brew &amp; Bean">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">The Brew &amp; Bean Promise</span>
+          <h2 class="section-title">Crafted with Purpose, Served with Love</h2>
+          <p class="section-subtitle">We believe a café should be more than a morning caffeine stop—it is a sanctuary of comfort, community, and unforgettable flavor.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card reveal-on-scroll">
+            <div class="pillar-icon-box">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            </div>
+            <h3 class="pillar-title">Direct-Trade Beans</h3>
+            <p class="pillar-text">We source directly from high-altitude family farms in Colombia, Ethiopia, and Guatemala, ensuring ethical living wages.</p>
+          </div>
+
+          <div class="pillar-card reveal-on-scroll delay-100">
+            <div class="pillar-icon-box">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+            </div>
+            <h3 class="pillar-title">Small-Batch Roasting</h3>
+            <p class="pillar-text">Every bean is roasted on our custom cast-iron roaster to bring out subtle caramel, floral, and dark cacao notes.</p>
+          </div>
+
+          <div class="pillar-card reveal-on-scroll delay-200">
+            <div class="pillar-icon-box">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="pillar-title">Scratch Bakery</h3>
+            <p class="pillar-text">Our bakers arrive before sunrise to roll 72-layer croissants, bake Basque cheesecakes, and knead organic sourdough.</p>
+          </div>
+
+          <div class="pillar-card reveal-on-scroll delay-300">
+            <div class="pillar-icon-box">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+            </div>
+            <h3 class="pillar-title">Cozy Workspace</h3>
+            <p class="pillar-text">Fiber optic Wi-Fi, abundant charging outlets, comfortable velvet seating, and an acoustic playlist curated for focus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Coffee & Featured Items -->
+    <section class="section section-alt" aria-label="Popular Coffee Selection">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Barista Signature Picks</span>
+          <h2 class="section-title">Popular Coffee &amp; Specialties</h2>
+          <p class="section-subtitle">Hand-selected customer favorites crafted with our signature house roast espresso and house-made syrups.</p>
+        </div>
+
+        <div class="menu-grid">
+          <!-- Item 1: Velvet Cappuccino -->
+          <article class="product-card reveal-on-scroll">
+            <div class="product-media">
+              <img src="images/coffee-cappuccino.jpg" alt="Velvet Cappuccino with latte art" class="product-img" loading="lazy" />
+              <div class="product-badge-group">
+                <span class="badge badge-gold">Bestseller</span>
+              </div>
+              <div class="product-price-tag">$4.75</div>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Coffee</span>
+              <h3 class="product-title">Velvet Cappuccino</h3>
+              <p class="product-desc">Equal parts single-origin espresso, steamed whole milk, and micro-foam dusted with organic cinnamon.</p>
+              <div class="product-footer">
+                <span class="product-calories">130 kcal</span>
+                <button class="btn-add-cart" onclick="CartEngine.addItem('coffee-cappuccino')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Vanilla Bean Latte -->
+          <article class="product-card reveal-on-scroll delay-100">
+            <div class="product-media">
+              <img src="images/coffee-latte.jpg" alt="Vanilla Bean Latte in ceramic cup" class="product-img" loading="lazy" />
+              <div class="product-badge-group">
+                <span class="badge badge-gold">House Special</span>
+              </div>
+              <div class="product-price-tag">$5.25</div>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Coffee</span>
+              <h3 class="product-title">Vanilla Bean Latte</h3>
+              <p class="product-desc">Smooth espresso folded with silky steamed oat milk and house-made Madagascar vanilla syrup.</p>
+              <div class="product-footer">
+                <span class="product-calories">180 kcal</span>
+                <button class="btn-add-cart" onclick="CartEngine.addItem('coffee-latte')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Signature Nitro Cold Brew -->
+          <article class="product-card reveal-on-scroll delay-200">
+            <div class="product-media">
+              <img src="images/coffee-coldbrew.jpg" alt="Signature Nitro Cold Brew" class="product-img" loading="lazy" />
+              <div class="product-badge-group">
+                <span class="badge badge-gold">Popular</span>
+              </div>
+              <div class="product-price-tag">$5.00</div>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Coffee</span>
+              <h3 class="product-title">Signature Nitro Cold Brew</h3>
+              <p class="product-desc">Steeped for 20 hours in cold filtered water, infused with food-grade nitrogen for a creamy stout head.</p>
+              <div class="product-footer">
+                <span class="product-calories">5 kcal</span>
+                <button class="btn-add-cart" onclick="CartEngine.addItem('coffee-coldbrew')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Basque Burnt Cheesecake -->
+          <article class="product-card reveal-on-scroll delay-300">
+            <div class="product-media">
+              <img src="images/dessert-cheesecake.jpg" alt="Basque Burnt Cheesecake slice" class="product-img" loading="lazy" />
+              <div class="product-badge-group">
+                <span class="badge badge-gold">Bestseller</span>
+              </div>
+              <div class="product-price-tag">$7.50</div>
+            </div>
+            <div class="product-body">
+              <span class="product-category">Dessert</span>
+              <h3 class="product-title">Basque Burnt Cheesecake</h3>
+              <p class="product-desc">Caramelized rustic crust with an ultra-creamy, molten center baked fresh daily in our café oven.</p>
+              <div class="product-footer">
+                <span class="product-calories">420 kcal</span>
+                <button class="btn-add-cart" onclick="CartEngine.addItem('dessert-cheesecake')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;" class="reveal-on-scroll">
+          <a href="menu.html" class="btn btn-primary">
+            <span>View Complete Menu (24 Items)</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Story Teaser -->
+    <section class="section" aria-label="About Brew and Bean Story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-media reveal-on-scroll">
+            <img src="images/about-story.jpg" alt="Artisan coffee beans being roasted" class="story-img-main" loading="lazy" />
+            <div class="story-experience-card">
+              <div class="experience-number">10+</div>
+              <div class="experience-text">Years of Artisan Roasting &amp; Community Warmth</div>
+            </div>
+          </div>
+
+          <div class="story-content reveal-on-scroll delay-100">
+            <span class="section-tag">Our Heritage</span>
+            <h2>Born from a Simple Passion for Exceptional Coffee</h2>
+            <p>Brew &amp; Bean began as a humble roastery workshop in 2014. What started as three friends tasting micro-lots on a kitchen table has blossomed into a cherished community gathering space.</p>
+            <p>Every morning, our master roaster listens to the first crack of beans in our drum roaster, ensuring the perfect harmony of sweetness, acidity, and aromatic depth.</p>
+
+            <div class="story-features">
+              <div class="story-check-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>100% Specialty Grade Beans</span>
+              </div>
+              <div class="story-check-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Direct Farmer Partnerships</span>
+              </div>
+              <div class="story-check-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>House-Made Artisan Syrups</span>
+              </div>
+              <div class="story-check-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Eco-Friendly Compostable Cups</span>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn btn-outline">
+              <span>Read Our Full Story</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Testimonials Carousel -->
+    <section class="section section-alt" aria-label="Customer Testimonials">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Community Love</span>
+          <h2 class="section-title">What Our Guests Say</h2>
+          <p class="section-subtitle">Real experiences from our daily guests, remote workers, and coffee enthusiasts.</p>
+        </div>
+
+        <div class="testimonials-wrapper reveal-on-scroll">
+          <div class="testimonials-track">
+            <!-- Slide 1 -->
+            <div class="testimonial-slide active">
+              <div class="testimonial-card">
+                <div class="star-rating">
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+                <div class="quote-icon">&ldquo;</div>
+                <blockquote class="testimonial-quote">
+                  "Brew &amp; Bean is my daily sanctuary. Their Vanilla Bean Latte and Basque Cheesecake are genuinely the best in the city. The ambient jazz, warm lighting, and friendly baristas make it feel like home."
+                </blockquote>
+                <div class="testimonial-author">
+                  <img src="images/customer-1.jpg" alt="Elena Vance" class="author-avatar" />
+                  <div class="author-info">
+                    <h4>Elena Vance</h4>
+                    <p>Creative Director &amp; Regular Guest</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="star-rating">
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+                <div class="quote-icon">&ldquo;</div>
+                <blockquote class="testimonial-quote">
+                  "As a coffee purist, their Nitro Cold Brew and single-origin pour-overs blew me away. You can taste the precision in every extraction. Plus, the high-speed Wi-Fi and sourdough toast make remote work pure bliss."
+                </blockquote>
+                <div class="testimonial-author">
+                  <img src="images/customer-2.jpg" alt="Marcus Thorne" class="author-avatar" />
+                  <div class="author-info">
+                    <h4>Marcus Thorne</h4>
+                    <p>Software Engineer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="star-rating">
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+                <div class="quote-icon">&ldquo;</div>
+                <blockquote class="testimonial-quote">
+                  "The weekend brunch is unmatched. The Truffle Avocado Toast and almond croissants are bakery heaven. The online ordering is so smooth, my order was ready the second I walked through the door!"
+                </blockquote>
+                <div class="testimonial-author">
+                  <img src="images/customer-3.jpg" alt="David &amp; Sarah Kim" class="author-avatar" />
+                  <div class="author-info">
+                    <h4>Sarah &amp; David Kim</h4>
+                    <p>Weekend Brunch Lovers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Slider Controls -->
+          <div class="testimonial-nav">
+            <button class="t-btn" id="prevTestimonial" aria-label="Previous review">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="t-btn" id="nextTestimonial" aria-label="Next review">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Opening Hours & Quick Visit -->
+    <section class="section" aria-label="Opening Hours and Location Info">
+      <div class="container">
+        <div class="pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+          <!-- Hours Card -->
+          <div class="pillar-card reveal-on-scroll" style="text-align: left;">
+            <div class="pillar-icon-box" style="margin: 0 0 20px;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 14px;">Opening Hours</h3>
+            <ul style="display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--clr-border); padding-bottom: 8px;">
+                <strong>Monday &ndash; Friday:</strong>
+                <span class="text-gold" style="font-weight: 700;">7:00 AM &ndash; 8:00 PM</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--clr-border); padding-bottom: 8px;">
+                <strong>Saturday:</strong>
+                <span class="text-gold" style="font-weight: 700;">8:00 AM &ndash; 9:00 PM</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; padding-bottom: 4px;">
+                <strong>Sunday &amp; Holidays:</strong>
+                <span class="text-gold" style="font-weight: 700;">8:00 AM &ndash; 7:00 PM</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Location & Contact Card -->
+          <div class="pillar-card reveal-on-scroll delay-100" style="text-align: left;">
+            <div class="pillar-icon-box" style="margin: 0 0 20px;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 14px;">Find Our Sanctuary</h3>
+            <p style="margin-bottom: 16px;">452 Artisan Boulevard, West Roast District, Suite 100</p>
+            <p style="margin-bottom: 8px;"><strong>Phone:</strong> <a href="tel:+15552345678" style="color: var(--clr-accent);">(555) 234-5678</a></p>
+            <p style="margin-bottom: 20px;"><strong>Email:</strong> <a href="mailto:hello@brewbean.com" style="color: var(--clr-accent);">hello@brewbean.com</a></p>
+            <a href="contact.html" class="btn btn-outline btn-sm">Get Directions &amp; Reserve Table</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA Section -->
+    <section class="section" style="padding-top: 0;" aria-label="Coffee Club Newsletter">
+      <div class="container">
+        <div class="newsletter-card reveal-on-scroll">
+          <div class="newsletter-content">
+            <span class="badge badge-gold" style="margin-bottom: 12px;">Brew &amp; Bean Club</span>
+            <h3>Join Our Coffee Community</h3>
+            <p>Subscribe for weekly barista tips, exclusive tasting events, and 10% off your first online order.</p>
+          </div>
+          <form class="newsletter-form" aria-label="Subscribe to newsletter">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address..." required aria-label="Email address" />
+            <button type="submit" class="btn btn-accent">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       3. SHOPPING CART DRAWER (Global Component)
+       ========================================================================= -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-header">
+      <div class="cart-title-wrapper">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <h3>Your Order</h3>
+      </div>
+      <button class="close-drawer-btn" id="closeCartDrawer" aria-label="Close cart drawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <!-- Dynamic Cart Item List -->
+    <div class="cart-items-list" id="cartDrawerItems"></div>
+
+    <!-- Empty State -->
+    <div class="cart-empty-state" id="cartEmptyState">
+      <div class="cart-empty-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      </div>
+      <h4>Your cart is empty</h4>
+      <p>Discover our single-origin coffees, fresh teas, and warm scratch pastries.</p>
+      <a href="menu.html" class="btn btn-primary btn-sm">Explore Menu</a>
+    </div>
+
+    <!-- Cart Footer with Pricing & Actions -->
+    <div class="cart-footer" id="cartDrawerFooter" style="display: none;">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$0.00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Estimated Tax (8%)</span>
+        <span id="cartTax">$0.00</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total</span>
+        <span id="cartTotal" class="text-gold">$0.00</span>
+      </div>
+
+      <div class="cart-footer-actions">
+        <button class="btn btn-accent" id="cartCheckoutBtn" style="width: 100%;">
+          <span>Proceed to Checkout</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+        <button class="btn-clear-cart" onclick="CartEngine.clearCart()">Clear Entire Cart</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       4. CHECKOUT MODAL (Global Component)
+       ========================================================================= -->
+  <div class="modal-wrapper" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+    <div class="modal-backdrop" id="checkoutModalBackdrop"></div>
+
+    <div class="modal-dialog">
+      <!-- Checkout Form View -->
+      <div id="checkoutFormView">
+        <div class="modal-header">
+          <h3 id="checkoutModalTitle" style="font-size: 1.3rem;">Complete Your Order</h3>
+          <button class="close-drawer-btn" id="closeCheckoutModal" aria-label="Close modal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <form class="modal-body" id="checkoutForm" novalidate>
+          <!-- Order summary accordion box -->
+          <div style="background: var(--clr-bg); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 16px; margin-bottom: 22px;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 10px; font-size: 0.95rem;">
+              <span>Order Items Summary</span>
+              <span id="checkoutModalTotal" class="text-gold">$0.00</span>
+            </div>
+            <div id="checkoutOrderSummary" style="max-height: 120px; overflow-y: auto; padding-right: 6px;"></div>
+          </div>
+
+          <div class="form-grid">
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="checkoutName" class="form-label">Full Name <span class="required">*</span></label>
+              <input type="text" id="checkoutName" class="form-control" placeholder="Jane Doe" required />
+              <span class="error-hint">Please enter your name</span>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+              <label for="checkoutPhone" class="form-label">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="checkoutPhone" class="form-control" placeholder="(555) 000-0000" required />
+              <span class="error-hint">Please enter a valid phone number</span>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group full-width">
+              <label for="checkoutEmail" class="form-label">Email Address <span class="required">*</span></label>
+              <input type="email" id="checkoutEmail" class="form-control" placeholder="jane@example.com" required />
+              <span class="error-hint">Please enter a valid email for order receipt</span>
+            </div>
+
+            <!-- Order Type -->
+            <div class="form-group full-width">
+              <label for="checkoutOrderType" class="form-label">Order Type <span class="required">*</span></label>
+              <select id="checkoutOrderType" class="form-control">
+                <option value="dine-in">Dine-in (At Café)</option>
+                <option value="takeout">Takeout (Quick Pickup)</option>
+                <option value="delivery">Local Delivery (Within 5 Miles)</option>
+              </select>
+            </div>
+
+            <!-- Table Number or Delivery Address -->
+            <div class="form-group full-width" id="checkoutLocationGroup">
+              <label for="checkoutLocation" class="form-label" id="checkoutLocationLabel">Table Number <span class="required">*</span></label>
+              <input type="text" id="checkoutLocation" class="form-control" placeholder="e.g., Table 4 or Patio 2" />
+              <span class="error-hint">Please provide your table or address</span>
+            </div>
+
+            <!-- Special Instructions -->
+            <div class="form-group full-width">
+              <label for="checkoutNotes" class="form-label">Special Instructions &amp; Dietary Notes</label>
+              <textarea id="checkoutNotes" class="form-control" placeholder="Extra oat milk, less ice, allergy notices..." style="min-height: 70px;"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 10px;">
+            <span>Place Order Now</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Confirmation Success View -->
+      <div id="checkoutSuccessView" class="order-success-screen" style="display: none;">
+        <div class="order-success-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Order Confirmed!</h3>
+        <p style="color: var(--clr-text-muted); max-width: 440px; margin: 0 auto;">Your order has been transmitted straight to the barista station.</p>
+        <div class="order-id-badge" id="confirmedOrderId">#BB-89241</div>
+        <p id="confirmedOrderMessage" style="font-size: 0.95rem; margin-bottom: 26px;"></p>
+        <button class="btn btn-primary" onclick="UIController.closeCheckoutModal()">Back to Café</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Scroll back to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- =========================================================================
+       5. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About Brand -->
+        <div class="footer-col footer-about">
+          <img src="images/logo.svg" alt="Brew &amp; Bean Logo" style="height: 44px; margin-bottom: 18px; filter: brightness(0) invert(1);" />
+          <p>Brew &amp; Bean is an artisan coffee roastery dedicated to direct-trade sourcing, sustainable roasting, and creating warm moments for our neighborhood community.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Crafted Menu</a></li>
+            <li><a href="about.html">Our Story &amp; Heritage</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+            <li><a href="#" class="js-open-cart">Shopping Cart</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Menu Categories -->
+        <div class="footer-col">
+          <h4>Delicacies</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html">Artisan Espresso</a></li>
+            <li><a href="menu.html">Nitro Cold Brews</a></li>
+            <li><a href="menu.html">Ceremonial Matcha</a></li>
+            <li><a href="menu.html">Sourdough Breakfast</a></li>
+            <li><a href="menu.html">Basque Cheesecakes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Opening Hours -->
+        <div class="footer-col">
+          <h4>Operating Hours</h4>
+          <ul class="footer-hours-list">
+            <li><span>Mon &ndash; Fri:</span> <span>7:00 AM &ndash; 8:00 PM</span></li>
+            <li><span>Saturday:</span> <span>8:00 AM &ndash; 9:00 PM</span></li>
+            <li><span>Sunday:</span> <span>8:00 AM &ndash; 7:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brew &amp; Bean Café. All rights reserved. Crafted with passion.</p>
+        <p>Designed for coffee enthusiasts everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
